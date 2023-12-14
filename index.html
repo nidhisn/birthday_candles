@@ -4,20 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
     <title>Happy Birthday</title>
 </head>
 <body>
     
     <div class="container">
         <h2 >Happy Birthday !</h2>
-    <div class="age">
-            <form name="myForm" onsubmit="return ageForm()">
+    <div class="age" id="ageForm">
+            <form name="myForm"  onsubmit="return ageForm()">
                 <label for="fage"><h1>What is your age?</h1></label><br>
             
             <input type="number" id="fage" name="fage">
             </form>
         </div>
-        <div class="cake-body" style="visibility: hidden;">
+        <div class="cake-body">
+        <div class="layer f1"  style="display: none;" >
                 <div class="spot-group sg1">
                     <div class="spot s1"></div>
                     <div class="spot s2"></div>
@@ -28,7 +30,7 @@
                     <div class="spot s2"></div>
                 </div>
             </div>
-            <div class="layer f2" style="visibility: hidden;">
+            <div class="layer f2" style="display: none;">
                 <div class="spot-group sg3">
                     <div class="spot s1"></div>
                     <div class="spot s2"></div>
@@ -39,14 +41,14 @@
                     <div class="spot s3"></div>
                 </div>
             </div>
-            <div class="layer f3" style="visibility: hidden;">
+            <div class="layer f3" style="display: none;">
                 <div class="spot-group sg5">
                     <div class="spot s1"></div>
                     <div class="spot s2"></div>
                     <div class="spot s3"></div>
                 </div>
             </div>
-            <div class="layer f4" style="visibility: hidden;">
+            <div class="layer f4" style="display: none;">
               <div class="drip-ctn">
                 <div class="drip d1"></div>
                 <div class="drip d2"></div>
@@ -59,7 +61,7 @@
                 <div class="drip d9"></div>
               <div>
             </div>
-            <div class="candle-ctn">
+            <div class="candle-ctn" id="candleContainer">
                 <div class="candle c1">
                   <div class="c-base"></div>
                   <div class="wick"></div>

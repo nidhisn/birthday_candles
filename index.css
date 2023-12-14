@@ -33,9 +33,12 @@ input{
 }
 
 .cake-body{
-    top:20%;
-    left:35%;
-    position: relative;
+    position:relative;
+    margin:100px;
+    left:20%;
+   
+    transition: opacity 1s ease-in-out; /* Smooth transition effect */
+    
 }
 .layer{
     display:block;
@@ -152,7 +155,7 @@ input{
 /* Icing Drips */
 
 .drip-ctn{
-    position:absolute
+    position:absolute;
     top:0;
     z-index:1;
 }
@@ -186,20 +189,23 @@ input{
 }
 .d6{
   top:38px;
-  right:47px
+  right:-100px;
+
 }
 .d7{
   top:35px;
-  right:30px
+  right:-118px;
+  
 }
 .d8{
   top:30px;
-  right:15px
+  right:-135px;
+ 
 }
 .d9{
-  height:25px;
-  top:20px;
-  right:0px;
+  top:27px;
+  right:-150px;
+  
 }
 
 /* Candles */
@@ -211,6 +217,19 @@ input{
   position:absolute;
   top:-30px;
   z-index:3;
+   
+animation: candle-fade-in 1s ease-in-out forwards; /* Animation for fade-in effect */
+}
+
+@keyframes candle-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Optional: Add a slight upward animation */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 .candle{
   position:absolute;
